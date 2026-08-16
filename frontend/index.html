@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskFlow - Task Manager</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ==============================
+         HEADER
+    =============================== -->
+
+    <header class="header">
+
+        <div class="header-content">
+
+            <div>
+                <h1>TaskFlow</h1>
+                <p>Simple & Smart Task Management</p>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==============================
+         MAIN CONTAINER
+    =============================== -->
+
+    <main class="container">
+
+
+        <!-- ==============================
+             ADD TASK CARD
+        =============================== -->
+
+        <section class="card">
+
+            <div class="section-title">
+
+                <div>
+                    <h2 id="formHeading">Add New Task</h2>
+                    <p>Create and manage your tasks easily.</p>
+                </div>
+
+            </div>
+
+
+            <!-- TASK FORM -->
+
+            <form id="taskForm">
+
+
+                <!-- TASK TITLE -->
+
+                <div class="form-group">
+
+                    <label for="taskTitle">
+                        Task Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="taskTitle"
+                        placeholder="Enter task title"
+                    >
+
+                    <small id="titleError" class="error"></small>
+
+                </div>
+
+
+                <!-- PRIORITY -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="priority">
+                            Priority
+                        </label>
+
+                        <select id="priority">
+
+                            <option value="low">
+                                Low
+                            </option>
+
+                            <option value="medium" selected>
+                                Medium
+                            </option>
+
+                            <option value="high">
+                                High
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- DUE DATE -->
+
+                    <div class="form-group">
+
+                        <label for="dueDate">
+                            Due Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="dueDate"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- BUTTONS -->
+
+                <div class="form-buttons">
+
+                    <button
+                        type="submit"
+                        id="saveButton"
+                        class="primary-btn"
+                    >
+                        Add Task
+                    </button>
+
+                    <button
+                        type="button"
+                        id="cancelButton"
+                        class="secondary-btn hidden"
+                    >
+                        Cancel
+                    </button>
+
+                </div>
+
+
+                <!-- SUCCESS MESSAGE -->
+
+                <p
+                    id="successMessage"
+                    class="success-message"
+                ></p>
+
+            </form>
+
+        </section>
+
+
+
+        <!-- ==============================
+             TASK LIST CARD
+        =============================== -->
+
+        <section class="card">
+
+            <div class="task-header">
+
+                <div>
+
+                    <h2>My Tasks</h2>
+
+                    <p id="taskCount">
+                        0 tasks
+                    </p>
+
+                </div>
+
+
+                <!-- FILTER -->
+
+                <div class="filter-box">
+
+                    <label for="filterPriority">
+                        Filter
+                    </label>
+
+                    <select id="filterPriority">
+
+                        <option value="all">
+                            All
+                        </option>
+
+                        <option value="low">
+                            Low
+                        </option>
+
+                        <option value="medium">
+                            Medium
+                        </option>
+
+                        <option value="high">
+                            High
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- TASK LIST -->
+
+            <div id="taskList">
+
+                <p class="empty-message">
+                    No tasks available.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==============================
+         FOOTER
+    =============================== -->
+
+    <footer>
+
+        <p>
+            TaskFlow &copy; 2026
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
